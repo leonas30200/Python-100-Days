@@ -851,3 +851,48 @@ https://blog.csdn.net/qqw666666/article/details/125652869
 简单的说GitHubDesktop就是[图形界面](https://so.csdn.net/so/search?q=图形界面&spm=1001.2101.3001.7020)版的Git，不需要命令行的操作，对新手比较友好。
 
 通过github的官网就可以下载使用，https://desktop.github.com/。
+
+## GitHub Desktop的简易使用方法
+
+原文链接：https://blog.csdn.net/xulong5000/article/details/114299173
+
+ GitHub作为最流行的版本控制系统，能非常方便地管理项目版本。原生的git要用较为繁琐的命令操作，其实我们可以使用官方GitHub desktop软件进行图形界面操作，非常方便，不过第一步，要先安装git。 
+一、安装git 
+
+二、安装GitHub desktop 
+     通过github的官网就可以下载使用，https://desktop.github.com/。原始地址下载速度可以接受，百度网盘中有v3.2。
+
+三、GitHub desktop的使用 
+        首先登陆自己的GitHub账号；之后，分几个使用场景来讲： 
+       1、本地建有项目，GitHub上还没有仓库 
+             这种情况，需要在GitHub desktop（下面简称gd）上添加本地仓库，file -- add local repository，然后选择所要上传的项目路径，随后点击add repository，这样一来，本地仓库添加好了，这时候可以看到gd左侧会显示有，change，多少，右边显示提交的历史版本。到这一步，还没有上传到GitHub，需要一次更新，在左下角输入，此次更新的名称，以及描述（可不写），点击commit提交，做完这一步，意味着项目所做的改动已经提交了，但是还没有同步到GitHub，需要点击，repository -- push，完成之后才是真正把此次修改同步到GitHub上（新建的本地仓库第一次需要点击下图标识位置，要设置一下远程仓库的名称，以及设定是否私密）。通常我们对一个项目进行开发修改，可以有很多次修改提交，但不需要每次都push，只需结束本次开发，比如下班了，这时候再push一次就好了，就把之前commit的所有记录都同步到GitHub上了。 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70.png)
+
+
+
+  2、在一台新机器拉取GitHub项目 
+           如果想在一台新机器同步拉取项目，同样先安装好git，gd，然后在浏览器上登陆GitHub，并进入要同步的仓库，点击下面clone or download，这里常用有两种方法，第一种，是把项目地址复制下来，然后如下图，把地址粘贴进去，选择一个本地仓库地址，确认就可以了，同步结束，ok。 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550658987-3.png) 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550700857-6.png)
+
+  ![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550709536-9.png)
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550716024-12.png)
+
+3、本地项目，同步GitHub线上数据 
+     我们经常会有这样的场景，在公司修改了项目，上传到GitHub，回到家，想继续对该项目进行开发修改，那么就需要把在公司做的最新的版本，拉取到家里的机器。其实很简单，只需pull一下就可以了。如下图 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550723112-15.png)
+
+四、GitHub需要注意的几个地方 
+       1、假如某个项目曾经上传到GitHub，后来GitHub上的仓库删除了，后面邮箱把这项目换一个名字上传上去，那么直接在gd中添加本地仓库，用新名字，然后push上去，是不行的，GitHub会自动识别以前的项目名字，并且报错，说该仓库存在。这时候，可以GitHub网站，新建回以前名字的仓库，并且gd中添加本地仓库也是用以前那个名字，这时候上传是ok的；那么问题来了，我们确实想换一个名字怎么办？有办法，首先GitHub网页进入要修改的仓库，点击setting，就能看到修改仓库名称的设置了，而本地gd，只需要重启就会同步更改仓库名称。 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550729818-18.png)
+
+五、GitHub desktop版本回退 
+        开发当中，我们经常会遇到这样一个问题，在一个项目中增加功能，或者模块，之前是可以正常运行的，但增加了新代码之后报错了，一时之间又找不到问题所在，这时候，如果在进行新模块开发之前，我们提交了项目的更新，那么现在我们就可以把项目退回到上一次提交的状态，如下图，在change隔壁就是history，显示每一次提交的记录，如果要退回到上一次的版本，则选中最上面的记录，右键，revert this commit即可（ps：在我的使用当中，跨版本退回会出错，只能一步一步退回，不知道是否是我的操作问题，欢迎指正）。 
+
+![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9sb25ncWluZ2h1YQ==,size_16,color_FFFFFF,t_70-1679550741342-21.png)
